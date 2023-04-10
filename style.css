@@ -1,0 +1,268 @@
+/* VARIABLES */
+:root{
+    /* font-family */
+    --ff-primary: 'Be Vietnam Pro', sans-serif;
+    --ff-body: var(--ff-primary);
+    --ff-heading: var(--ff-primary);
+
+/* font-size */
+    --fs-300: 0.875rem;
+    --fs-400: 1rem;
+    --fs-500: 1.25rem;
+    --fs-600: 2rem;
+    --fs-700: 2.5rem;
+
+    --fs-body:var(--fs-300);
+    --fs-primary-heading: var(--fs-700);
+    --fs-secondary-heading: var(--fs-600);
+    --fs-terciary-heading: var(--fs-500);
+    --fs-nav: var(--fs-400);
+   
+    --size-100: .25rem;
+    --size-200: .5rem;
+    --size-300: .75rem;
+    --size-400: 1rem;
+    --size-500: 1.25rem;
+    --size-600: 1.5rem;
+    --size-700: 2rem;
+    --size-800: 4rem;
+    --size-900: 5rem;
+
+    /* font weight */
+    --fw-regular: 400;
+     --fw-semi-bold: 500;
+     --fw-bold: 700;
+
+     /* COLOR */
+     --crl-bkg-primary:#e0e7e0;
+     --crl-bkg-secondary:#ffffff;
+
+}
+
+
+
+
+/* CSS RESET */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+*{
+   margin: 0; 
+   padding: 0;
+   font: inherit; /* takes off the default big sizes of h1, h2.. */
+   
+}
+
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html, body{
+    height: 100%;
+}
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+svg,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* ------------------------------------------------------------------------------------------- */
+
+/* GENERAL STYLING */
+body{
+    font-family: var(--ff-body);
+    font-size: var(--fs-body);
+    background-color: var(--crl-bkg-primary);
+}
+
+.container{
+    --max-width: 1110px;
+    --padding: 1rem; 
+    margin-inline: auto;
+}
+
+/* NAVIGATION */
+.primary-nav{
+    padding-top: var(--size-300);
+    max-width: 100%;
+    }
+
+.nav-list{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3rem;
+    list-style: none;
+    margin-right: 10%;
+    margin-top: 1.5%;
+
+}
+.nav-list a{
+    text-decoration: none;
+    color: white;
+    font-size: var(--fs-400);
+    font-weight: var(--fw-bold);
+}
+.nav-list a:hover{
+    color: #5dbea9;
+}
+
+/* CONTENT */
+.part-1{
+    background-color: #5e724c;
+    color: white;
+    background-image: url(images/aves-brasileiras-4.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+    
+}
+
+.primary-heading{
+    font-size: var(--fs-primary-heading);
+    font-weight: bold;
+    }
+.introduction{
+    margin-top: 10%;
+    margin-bottom: 2%;
+    max-width: 30%;
+    margin-left: 10%;
+    padding-bottom: 8%;
+
+}
+@media(max-width: 80em) {
+    .introduction{
+        margin-bottom: 5em;
+        max-width: 50%;
+    }
+}
+@media(max-width: 50em){
+    .introduction{
+        max-width: 80%;
+        margin-bottom: 8em;
+    }
+}
+
+.main-content{
+    position: relative;
+    max-width: 90%;
+    margin: auto;
+    top: -8%;
+}
+.content{
+    display: flex;
+    padding: 3%;
+    justify-content: space-between;
+    background-color: var(--crl-bkg-secondary);
+    margin-bottom: 5%;
+    box-shadow: 0 10px 6px -6px #777;
+}
+
+.item1{
+    width: 36%;
+    padding: 5%;
+
+}
+.item1-title{
+    font-size: var(--fs-secondary-heading);
+    font-weight: var(--fw-bold);
+}
+
+.item2{
+    width: 30%;
+    color: white;
+    padding: 3%;
+    padding-top: 25%;
+}
+.item2-title{
+    font-size: var(--fs-terciary-heading);
+    font-weight: var(--fw-bold);
+}
+
+@media(max-width: 50em){
+.content{
+    flex-direction: column;
+    width: 100%;
+    
+}
+.item1{
+    width: 95%;
+}
+.item2{
+    width: 100%;
+}
+}
+
+
+/* IMAGES */
+.bkg-img{
+    background-image: url(images/1789362_c381695d42420279a3ff94fbfd3203e9.jpg);
+    background-size: cover;
+    background-color: #929292;
+    background-blend-mode: multiply;
+}
+
+.bkg-img1{
+    background-image: url(images/1789362_c381695d42420279a3ff94fbfd3203e9.jpg);
+}
+.bkg-img2{
+    background-image: url(images/sai-azul_PNI-200807-B_45888a.jpg);
+}
+.bkg-img3{
+    background-image: url(images/sabia.jpg);
+}
+.bkg-img4{
+    background-image: url(images/sabia-laranjeira-sitio3.jpg);
+}
+.bkg-img5{
+    background-image: url(images/papagaio.jpg);
+}
+.bkg-img6{
+    background-image: url(images/papais.jpg);
+}
+.bkg-img7{
+    background-image: url(images/BEM-TE-VI.jpg);
+}
+.bkg-img8{
+    background-image: url(images/Bem-te-vi-4.jpg);
+}
